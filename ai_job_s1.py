@@ -1,12 +1,12 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from sklearn.naive_bayes import GaussianNB
+from sklearn.naive_bayes import BernoulliNB
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-print("--- Implementare Naïve Bayes (GaussianNB) pentru Clasificarea Salariului ---")
+print("--- Implementare Naïve Bayes (BernoulliNB) pentru Clasificarea Salariului ---")
 
 try:
     df = pd.read_csv('ai_job_market.csv')
@@ -39,8 +39,10 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 
 # Antrenarea Modelului Naïve Bayes
+# BernoulliNB este mai potrivit pentru date binare (one-hot encoded)
+# GaussianNB presupune distribuție normală, ceea ce nu se aplică la date binare
 
-nb_classifier = GaussianNB()
+nb_classifier = BernoulliNB()
 nb_classifier.fit(X_train, y_train)
 
 # 6. Evaluarea Modelului
@@ -68,4 +70,4 @@ plt.xlabel('Valori Prezise')
 plt.tight_layout()
 plt.show()
 print("Diagrama Matricei de Confuzie a fost generată.")
-print("\nExecuție 'ai_job_s2.py' finalizată.")
+print("\nExecuție 'ai_job_s1.py' finalizată.")
