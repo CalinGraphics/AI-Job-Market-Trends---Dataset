@@ -34,6 +34,15 @@ Acest dataset a fost construit pentru a simula evoluția pieței muncii în dome
 
 ---
 
+### Fișierele Cheie ale Proiectului
+
+| Fișier | Descriere |
+| :--- | :--- |
+| `ai_job_eda.py` | Scriptul de bază pentru **Explorarea și Analiza Datelor (EDA)**. |
+| `ai_job_s1.py` | Implementarea algoritmului **Naïve Bayes**. |
+
+---
+
 ## Obiective
 
 Proiectul poate fi utilizat pentru multiple scopuri de cercetare și analiză:
